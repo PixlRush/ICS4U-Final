@@ -2,18 +2,18 @@
 ## Proposal
 I would like to make a command-line banking service. It will be able to store and print multiple accounts per user, have a username and password (hashed in storage) for each user, be able to deposit and withdraw funds with throwing the correct exceptions whenever needed.
 ## UML
-#### User
+### User `interface Commandable`
 ```
 Account[] accounts
 String name
 String password
 ```
 ```
-cmd()
+boolean login()
 getBalances()
 toString()
 ```
-#### Account
+### Account `interface Commandable`
 ```
 double value
 Ledger ledger
@@ -23,7 +23,7 @@ deposit()
 withdraw()
 transfer()
 ```
-#### Ledger
+### Ledger
 ```
 ArrayList<Modification> changes
 ```
@@ -31,7 +31,7 @@ ArrayList<Modification> changes
 toString()
 getTransaction(Date)
 ```
-#### Modification
+### Modification
 ```
 Date time
 double value
@@ -40,5 +40,9 @@ double value
 toString()
 getTime()
 getValue()
+```
+### Commandable
+```
+cmd(String[])
 ```
 ## Test Cases
