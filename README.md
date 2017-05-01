@@ -1,2 +1,4 @@
-# ICS4U-Final
-This is the final project for my ICS4U1 class.
+# ICS4U1-E1 Final Project
+## Proposal
+## UML
+## Test Cases
