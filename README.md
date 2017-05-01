@@ -3,7 +3,7 @@
 I would like to make a command-line banking service. It will be able to store and print multiple accounts per user, have a username and password (hashed in storage) for each user, be able to deposit and withdraw funds with throwing the correct exceptions whenever needed.
 ## UML
 ### User
-`interface Commandable`
+Commandable >>
 ```
 Account[] accounts
 String name
@@ -15,7 +15,7 @@ getBalances()
 toString()
 ```
 ### Account
-`interface Commandable`
+Commandable >>
 ```
 double value
 Ledger ledger
