@@ -1,50 +1,43 @@
 # ICS4U1-E1 Final Project
 ## Proposal
-I would like to make a command-line banking service. It will be able to store and print multiple accounts per user, have a username and password (hashed in storage) for each user, be able to deposit and withdraw funds with throwing the correct exceptions whenever needed.
+I would like to make a game of minesweeper. The game will have multiple difficulty levels and will be controlled by a command-line input. This will show recursion through its dig method which if it finds nothing will dig everywhere around itself. It will use an array of objects as its board. The object base will be the super class to many children classes under it (mine, flag, etc...). This will also include special modes that vary their digging styles and notation. It will hold the 5 fastest times in a file for your difficulty and style.
 ## UML
-### User
-Commandable >>
+### Minesweeper
 ```
-Account[] accounts
-String name
-String password
+Board field
 ```
 ```
-boolean login()
-getBalances()
-toString()
+public static void main(String[] args)
 ```
-### Account
-Commandable >>
+### Board
 ```
-double value
-Ledger ledger
-```
-```
-deposit()
-withdraw()
-transfer()
-```
-### Ledger
-```
-ArrayList<Modification> changes
+Tile[][] field
+int len
+int wid
+int mine
+int digStyle
 ```
 ```
-toString()
-getTransaction(Date)
+cmd()
+boolean dig(x,y)
+void flag(x,y)
 ```
-### Modification
+### Tile
 ```
-Date time
-double value
+int surround
+int style
+boolean dug
+boolean flagged
 ```
 ```
-toString()
-getTime()
-getValue()
+boolean dig(style)
+int search(style)
+flag()
+boolean getDug()
+boolean getFlagged()
 ```
-### Commandable
+### `Tile >` Mine
 ```
-cmd(String[])
+boolean detonated
 ```
 ## Test Cases
