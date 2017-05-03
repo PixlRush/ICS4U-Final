@@ -40,4 +40,5 @@ boolean getFlagged()
 ```
 boolean detonated
 ```
+### `Tile >` Blank
 ## Test Cases
